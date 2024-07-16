@@ -121,40 +121,6 @@ def calculate_distribution_score(image):
         + weights["grid_uniformity"] * grid_uniformity_normalized
     )
 
-    # print(f"spatial distribution: {spatial_distribution_normalized}")
-    # print(f"uniqueness: {uniqueness_normalized}")
-    # print(f"coverage distribution: {coverage_normalized}")
-    # print(f"grid uniformity: {grid_uniformity_normalized}")
-    # print(f"keypoint entropy: {keypoint_entropy_normalized}")
-
     final_distribution_score = combined_score * 100  # Scale to 0-100
 
     return final_distribution_score
-
-
-# # Load image
-# files = [
-#     "Images/test_01.jpeg",
-#     "Images/test_02.jpeg",
-#     "Images/test_03.jpeg",
-#     "Images/test_04.jpeg",
-#     "Images/test_05.jpeg",
-#     "Images/test_06.jpeg",
-#     "Images/test_07.jpg",
-#     "Images/test_08.jpg",
-#     "Images/test_09.png",
-#     "Images/test_10.jpg",
-#     "Images/test_11.png",
-#     "Images/test_12.png",
-#     "Images/test_13.png",
-#     "Images/test_14.jpg",
-#     "Images/test_15.png",
-# ]
-# for file in files:
-#     print("Processing:", file)
-#     image = cv2.imread(file)
-#     if image is not None:
-#         distribution_score = calculate_distribution_score(image)
-#         print(f"Image Distribution Score: {distribution_score:.2f}")
-#     else:
-#         print(f"Error: Unable to read {file}")

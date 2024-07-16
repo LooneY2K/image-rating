@@ -76,40 +76,6 @@ def calculate_quality_score(image):
         + weights["noise_level"] * noise_level_normalized
     )
 
-    # print(f"The sharpness is: {sharpness_normalized}")
-    # print(f"Contrast is: {contrast_normalized}")
-    # print(f"Colorfulness is: {colorfulness_normalized}")
-    # print(f"Noise level is: {noise_level_normalized}")
     final_quality_score = combined_score * 100  # Scale to 0-100
 
     return final_quality_score
-
-
-# # Load image
-# files = [
-#     "Images/test_01.jpeg",
-#     "Images/test_02.jpeg",
-#     "Images/test_03.jpeg",
-#     "Images/test_04.jpeg",
-#     "Images/test_05.jpeg",
-#     "Images/test_06.jpeg",
-#     "Images/test_07.jpg",
-#     "Images/test_08.jpg",
-#     "Images/test_09.png",
-#     "Images/test_10.jpg",
-#     "Images/test_11.png",
-#     "Images/test_12.png",
-#     "Images/test_13.png",
-#     "Images/test_14.jpg",
-#     "Images/test_15.png",
-#     "Images/test_16.jpeg",
-#     "Images/test_17.jpg",
-# ]
-# for file in files:
-#     print("Processing:", file)
-#     image = cv2.imread(file)
-#     if image is not None:
-#         quality_score = calculate_quality_score(image)
-#         print(f"Image Quality Score: {quality_score:.2f}")
-#     else:
-#         print(f"Error: Unable to read {file}")
